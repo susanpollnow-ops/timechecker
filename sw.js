@@ -1,7 +1,7 @@
 // Keeps the checker working offline and makes it open instantly.
 // When you update the standards, change the version below so phones pick up the new copy.
-const CACHE = 'ssc-times-v1';
-const FILES = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+const CACHE = 'ssc-times-v2';
+const FILES = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './maskable-192.png', './maskable-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
